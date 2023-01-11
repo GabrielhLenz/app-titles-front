@@ -1,0 +1,22 @@
+<a class="container">
+    <a class="options"> 
+        <a class="option" (click)="situation(0)">Favoritos</a>
+        <a class="option" (click)="situation(1)">Assistir mais tarde</a>
+        <a class="option" (click)="situation(2)">Assistidos</a>
+        <a class="option" (click)="situation(-1)">Todos</a>
+    </a>
+</a>
+
+
+<div class="movieSection">
+    <div class="movies"  *ngFor="let title of data">
+        <div class="movie">
+            <div class="movie" mat-list-item [routerLink]="title.type === 0 ? '/filmes/' + title.id : '/series/' + title.id">
+                <img src="https://image.tmdb.org/t/p/w500/{{title.poster_path}}" alt="logo">
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+

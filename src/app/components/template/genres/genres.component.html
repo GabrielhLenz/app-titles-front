@@ -1,0 +1,5 @@
+<div class="genres" *ngFor="let genre of genres?.genres">
+    <div class="genre">
+        <button class="option" (click)="selectGenre(genre.id)" routerLink='/filmes'> {{ genre?.name }} </button>
+    </div>
+</div>

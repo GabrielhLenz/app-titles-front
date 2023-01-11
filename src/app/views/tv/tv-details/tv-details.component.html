@@ -1,0 +1,50 @@
+<div class="about">
+    <div class="large_header">
+      <img class="image" src="https://image.tmdb.org/t/p/w500/{{details.poster_path}}">
+      <div class="details">
+        <p style="font-weight: bold;">{{ details.name}}</p>
+        <p style="font-weight: bold;">SINOPSE</p>
+        <p class="overview">{{ details.overview}}</p>
+        <p>Classificação Geral dos Usuários: {{ details.vote_average}}%</p>
+        <p>Temporadas: {{details.number_of_seasons}}</p>
+        <p>Total de episódios: {{details.number_of_episodes}}</p>
+        <div>
+          <button class="button" (click)="situation(0)" matTooltip="Favoritar" [ngClass]="{'active': selectedSituation == 0}">
+            <i class="material-icons">star</i>
+        </button>
+        <button class="button" (click)="situation(1)" matTooltip="Assistir mais tarde" [ngClass]="{'active': selectedSituation == 1}">
+            <i class="material-icons">favorite</i>
+        </button>
+        <button class="button" (click)="situation(2)" matTooltip="Assistido" [ngClass]="{'active': selectedSituation == 2}">
+            <i class="material-icons">bookmark</i>
+        </button>
+          <button class="button" (click)="delete()" matTooltip="Excluir"> 
+            <i class="material-icons">
+              delete
+            </i>
+          </button>
+          
+          <a class="button">
+            <i class="material-icons">
+              play_arrow
+            </i>
+            Trailer
+          </a>
+        </div>  
+      </div>
+      
+    </div>
+
+    <select id="season" (change)="onSeasonChange($event)">
+      <option *ngFor="let option of seasonOption">{{option}}</option>
+    </select>
+
+    <div *ngFor="let episode of season">
+      <div class="episode-box">
+        <p>Episódio {{episode.episode_number}}</p>
+        <p style="font-weight: bold;">{{episode.name}}</p>
+        <p>{{episode.overview}}</p>
+        
+      </div>
+    </div>
+</div>

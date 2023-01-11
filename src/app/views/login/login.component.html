@@ -1,0 +1,27 @@
+<div class="menu-container" *ngIf="login == 1">
+  <form class="login-form" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    <h1>Entrar</h1>
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email" ngModel required><br>
+    <label for="password">Senha:</label><br>
+    <input type="password" id="password" name="password" ngModel required><br><br>
+    <a (click)="alter(0)">Criar conta</a>
+    <button  type="submit">Entrar</button>
+  </form>
+</div> 
+
+
+<div class="menu-container" *ngIf="login == 0">
+  <form class="login-form" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    <h1>Criar conta</h1>
+    <label for="name">Nome:</label><br>
+    <input type="text" id="name" name="name" ngModel required><br>
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email" ngModel required><br>
+    <label for="password">Senha:</label><br>
+    <input type="password" id="password" name="password" ngModel required><br><br>
+    <a (click)="alter(1)">Já tenho conta!</a>
+    <button  type="submit">Criar Conta</button>
+  </form>
+</div> 
+

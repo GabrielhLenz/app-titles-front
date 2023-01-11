@@ -1,0 +1,60 @@
+.sidenav {
+    background-color: #800880;
+    justify-content: right;
+    margin-right:auto;
+    width: 264px;
+}
+.container {
+    margin-right:auto;
+}
+
+.sidenav a{
+    color: black
+}
+
+.content {
+    background-color: white
+}
+.option{
+    display: inline-flex;
+    width: 100%;
+    height: 64px;
+}
+
+.option .movie{
+    float: right;
+    width: 50%;
+    height: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #a808a8;
+}
+
+.option .tvshow{
+    width: 50%;
+    height: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #a808a8;
+}
+
+button{
+    cursor:pointer;
+}
+
+.genres {
+    padding-left: 1px;
+    display: inline-block;
+}
+.genre {
+    padding: 5px;   
+}
+
+.genreOption{
+    border-radius: 25px;
+    cursor: pointer;
+}   
+
+.material-icons {
+    vertical-align: middle;
+}

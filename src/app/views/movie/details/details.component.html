@@ -1,0 +1,46 @@
+<div class="about">
+  <div class="large_header">
+    <img class="image" src="https://image.tmdb.org/t/p/w500/{{details.poster_path}}">
+    <div class="details">
+      <p class="title">{{ details.title}}</p>
+      <p style="font-weight: bold;">SINOPSE</p>
+      <p class="overview">{{ details.overview}}</p>
+      <p>Lançamento: {{ details.release_date}}</p>
+      <p>Duração: {{ details.runtime}} minutos</p>
+      <p>Classificação Geral dos Usuários: {{ details.vote_average}}%</p>
+      <div>
+        <button class="button" (click)="situation(0)" matTooltip="Favoritar" [ngClass]="{'active': selectedSituation == 0}">
+          <i class="material-icons">star</i>
+      </button>
+      <button class="button" (click)="situation(1)" matTooltip="Assistir mais tarde" [ngClass]="{'active': selectedSituation == 1}">
+          <i class="material-icons">favorite</i>
+      </button>
+      <button class="button" (click)="situation(2)" matTooltip="Assistido" [ngClass]="{'active': selectedSituation == 2}">
+          <i class="material-icons">bookmark</i>
+      </button>
+        <button class="button" (click)="delete()" matTooltip="Excluir"> 
+          <i class="material-icons">
+            delete
+          </i>
+        </button>
+        
+        <a class="button">
+          <i class="material-icons">
+            play_arrow
+          </i>
+          Trailer
+        </a>
+      </div>  
+    </div>
+    </div>
+
+  <!--<div class="suggestions">
+    <div class="movieSuggestion" *ngFor="let movie of similar?.results">
+          <div class="movie" mat-list-item routerLink="/filmes/{{movie?.id}}">
+              <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="logo">
+          </div>
+    </div>
+  </div>
+  >!-->
+
+</div>

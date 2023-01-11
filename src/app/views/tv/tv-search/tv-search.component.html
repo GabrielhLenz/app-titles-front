@@ -1,0 +1,9 @@
+<div>
+    <div class="tvshows" *ngFor="let tvshow of results?.results">
+        <div class="tvshow" mat-list-item routerLink="/series/{{tvshow?.id}}">
+            <img src="https://image.tmdb.org/t/p/w500/{{tvshow.poster_path}}" alt="logo">
+        </div>
+        
+    </div>
+    <button (click)="next()">Proxima</button>
+</div>

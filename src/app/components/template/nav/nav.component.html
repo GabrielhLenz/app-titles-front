@@ -1,0 +1,26 @@
+
+<mat-sidenav-container class="container">
+    <mat-sidenav  class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
+        <div class="genres" *ngFor="let genre of genres?.genres">
+            <div class="genre">
+                <button class="genreOption" (click)="selectGenre(genre.id)" routerLink='/{{section}}'> {{ genre?.name }} </button>
+            </div>
+        </div>
+        <div *ngIf="section  === 'filmes'">
+            <button (click)="order('popular')" >Populares</button>
+            <button (click)="order('upComing')" >Em Breve</button>
+            <button (click)="order('nowPlaying')">Lançamentos</button>
+        </div>  
+        
+        <mat-nav-list>
+            <span class="search">
+                <form #form="ngForm" (keydown.enter)= "redirect(query.value)">
+                <input type="text" name="query" #query="ngModel" placeholder="{{ section }}" [ngModel]="query.value" > 
+                <i class="material-icons"  routerLink="/{{section}}/search/{{query.value}}">
+                    search
+                </i>
+                </form>                
+            </span>
+        </mat-nav-list>
+    </mat-sidenav>
+</mat-sidenav-container>

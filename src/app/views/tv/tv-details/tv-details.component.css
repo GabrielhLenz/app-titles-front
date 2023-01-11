@@ -1,0 +1,133 @@
+.about{
+    padding: 20px;
+}
+
+.large_header {
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 90%;
+    height: 600px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #808080;
+    display: inline-block;
+}
+.image {
+    padding: 50px;
+    display: inline;
+    width: 300px;
+    height: 510px;
+}
+
+.large_header .details {
+    float: right;
+    display: block;
+    padding-top: 100px;
+    width: 65%;
+    height: 100px;
+    font-size: 18px;
+
+}
+
+.details .title{
+    width: auto;
+    height: auto;
+}
+
+
+.overview{
+    display: inline-block;
+}
+
+.suggestions {
+    border-style: solid;
+    border-width: 2px;
+    border-color: blueviolet;
+    height: 200px;
+   
+}
+
+ .large_header img {
+    float:left;
+    display: block;
+    width: 300px;
+    height: 510px;
+    padding: 40px;
+    border-radius: 46px;
+}
+
+.card_seasons {
+    width: auto;
+    height: 195px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #808080;
+    display: block;
+}
+
+.card_seasons .image {
+    float: left;
+    display: inline-block;
+    height: 195px;
+    width: 138px;
+}
+
+.card_seasons .season {
+    float: right;
+    height: 195;
+    width: 85%;
+}
+
+.button {
+    cursor: pointer
+}
+
+.episode-box{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #808080;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    }
+    
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        }
+        
+        .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+            }
+            
+            .button.active {
+                background-color: #a808a8;    
+            }

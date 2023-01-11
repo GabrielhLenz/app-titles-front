@@ -1,22 +1,38 @@
 .header {
-    display: flex;
-    align-items: center;
+    display: flex;   
+    justify-content: flex-end;
 }
 
 .header a {
-    display: flex;
+    display: block;
     align-items: center;
     text-decoration: none;
 }
 
-.header .logo {
-    max-height: 64px;
-}
 
 .header .title-group {
     padding-left: 25px;
+    display: inline-flex;
 }
 
-.header .title-group i{
-    padding-right: 5px;
+.header .title-group a{
+    padding-right: 64px;
+}
+
+.container {
+    display: block;
+}
+
+.search {
+    position: absolute;
+    right: 64px;    
+}
+
+.user {
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.material-icons {
+    vertical-align: middle;
 }

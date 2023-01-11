@@ -1,0 +1,15 @@
+<app-nav [section]="section" (options)="setOption($event)" (optionGenre)="setGenreOption($event)"></app-nav>
+<div class="container">
+    <div class="tvshows" *ngFor="let tvshow of popularTVShows?.results">
+        <div class="tvshow">
+            <div class="tvshow" mat-list-item routerLink="/series/{{tvshow?.id}}">
+                <img src="https://image.tmdb.org/t/p/w500/{{tvshow.poster_path}}" alt="logo">
+            </div>
+        </div>
+        
+    </div>
+    <div class="center-buttons">
+        <button class="btn" (click)="previousPage()">Anterior</button>
+        <button class="btn" (click)="nextPage()">Proxima</button>
+    </div>
+</div>

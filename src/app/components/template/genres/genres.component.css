@@ -1,0 +1,11 @@
+.genres {
+    padding-left: 1px;
+    display: inline-block;
+}
+.genre {
+    padding: 5px;   
+}
+
+.option{
+    cursor: pointer;
+}

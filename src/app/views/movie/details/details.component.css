@@ -1,0 +1,68 @@
+.about{
+    padding: 20px;
+}
+
+.large_header {
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 90%;
+    height: 600px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #808080;
+    display: inline-block;
+}
+.image {
+    padding: 50px;
+    display: inline;
+    width: 300px;
+    height: 510px;
+    border-radius: 57px;
+}
+
+.large_header .details {
+    float: right;
+    display:block;
+    padding-top: 100px;
+    width: 65%;
+    height: 100px;
+    font-size: 18px;
+
+}
+
+.details .title{
+    width: auto;
+    height: auto;
+}
+
+.overview{
+    display: inline-flex;
+}
+
+.suggestions {
+    border-style: solid;
+    border-width: 2px;
+    border-color: blueviolet;
+    height: 200px;
+   
+}
+
+.movieSuggestion{
+    height: auto;
+}
+
+
+.movie img {
+    float:left;
+    width: 138px;
+    height: 175px;
+    padding: 10px;
+    padding-left: 25px;
+}
+
+.button {
+    cursor: pointer
+}
+.button.active {
+    background-color: #a808a8;    
+}

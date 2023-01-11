@@ -1,15 +1,31 @@
 <mat-toolbar class="header mat-elevation-z5">
-    <span>
-        <a>
-            <img class="logo" src="assets/images.jpeg" alt="logo">
-        </a>
-    </span>
     <span class="title-group">
-        <a>
+        <a (click)="alterSearch('')" routerLink="/">
             <i class="material-icons">
                 home
             </i>
-            HOME
+            Início
         </a>
-    </span>    
+        <a mat-list-item (click)="alterSearch('filmes/search')" routerLink="/filmes">
+            <i class="material-icons">
+                movies
+            </i>
+            Filmes
+        </a>
+        <a mat-list-item (click)="alterSearch('series/search')" routerLink="/series">
+            <i class="material-icons">
+                ondemand_video
+            </i>
+            Séries
+        </a>
+        
+       
+    </span>
+    <div class="user" (click)="settings()">
+        <a *ngIf="token == 'Login'" routerLink="/login">Logar</a>
+        <a *ngIf="token != 'Login'">Deslogar</a>
+    </div>
+
 </mat-toolbar>
+<router-outlet></router-outlet>
+
